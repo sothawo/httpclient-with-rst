@@ -1,3 +1,4 @@
+import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import java.io.PrintWriter
 import java.net.Socket
@@ -8,7 +9,7 @@ fun main(args: Array<String>) {
 
 class HttGetpClientWithRst {
 
-    val log = LoggerFactory.getLogger(HttGetpClientWithRst::class.java)
+    private val log: Logger = LoggerFactory.getLogger(HttGetpClientWithRst::class.java)
 
     fun run(args: Array<String>) {
         if (args.size != 3) {
